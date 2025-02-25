@@ -28,6 +28,10 @@
   src: url("/fonts/sf-pro-text-regular-webfont.woff2");
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -178,22 +182,26 @@ body {
   display: flex;
 }
 
+.about__title {
+  color: #ff4646;
+}
+
 .about__column-left {
   flex: 0 0 50%;
   padding: 100px 0px 100px 60px;
   background-color: white;
-  border-top-left-radius: 20px;  
-  border-bottom-left-radius: 20px;  
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .about__column-right {
   flex: 0 0 50%;
-  border-top-right-radius: 20px;  
-  border-bottom-right-radius: 20px;  
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   background-color: white;
 }
 
-.about__column-wrapper{
+.about__column-wrapper {
   max-width: 426px;
   width: 100%;
   padding: 60px 0px;
@@ -202,16 +210,16 @@ body {
   gap: 20px;
 }
 
-.generation__title{
+.generation__title {
   font-family: "Allura Regular";
   font-weight: 400;
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0.05em;
-  color: #FF4646;
+  color: #ff4646;
 }
 
-.generation__subtitle{
+.generation__subtitle {
   font-weight: 600;
   font-size: 24px;
   line-height: 152%;
@@ -219,13 +227,88 @@ body {
   text-transform: uppercase;
 }
 
-.about__text{
+.about__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 148%;
-  color: #181C29;
+  color: #181c29;
 }
 
-.about__column-img{
+.about__column-img {
   border-radius: 20px;
+}
+
+.slider {
+  height: 488px;
+  background: #ff4646;
+  background-image: url("/images/bg-snow.png");
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  padding: 60px 0px;
+}
+
+.slider__main {
+  margin-bottom: 20px;
+}
+
+.slider__title {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.slider__subtitle {
+  color: white;
+}
+
+.slider__header {
+  text-align: center;
+}
+
+.slider__header {
+  margin-bottom: 20px;
+}
+
+.slider__inside {
+  width: 1993px;
+}
+
+.slider__img img {
+  border-radius: 20px;
+  height: 200px;
+  width: 200px;
+}
+
+.slider__text {
+  color: #fff;
+  font-weight: 600;
+  font-size: 80px;
+  text-transform: uppercase;
+}
+
+.slider__inside-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.slider__btn {
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 56px;
+  height: 56px;
+  position: relative;
+}
+
+.button__left svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__button {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
 }
