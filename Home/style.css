@@ -271,6 +271,8 @@ body {
 
 .slider__inside {
   width: 1993px;
+  transition: transform 1.5s ease-in-out;
+
 }
 
 .slider__img img {
@@ -300,7 +302,7 @@ body {
   position: relative;
 }
 
-.button__left svg {
+.slider__btn svg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -311,4 +313,8 @@ body {
   display: flex;
   gap: 20px;
   justify-content: end;
+}
+
+.button__opacity {
+  border: 1px solid rgba(255, 255, 255, 0.4); 
 }
