@@ -318,3 +318,96 @@ body {
 .button__opacity {
   border: 1px solid rgba(255, 255, 255, 0.4); 
 }
+.best__gifts {
+  height: 554px;
+  background: #ff4646;
+  background-image: url("/images/bg-snow.png");
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  padding: 60px 0px;
+}
+
+.gifts__cards {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.gifts__card {
+  height: 342px;
+  flex: 0 0 calc((100% - 36px) / 4);
+  background-color: #ecf3f8;
+  border-radius: 20px;
+}
+
+.gifts__title {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.gifts__subtitle {
+  color: white;
+}
+
+.gifts__header {
+  text-align: center;
+}
+
+.gifts__inform {
+  min-height: 112px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.generation__inform-title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.gifts__inform-first {
+  color: #4361ff;
+}
+
+.gifts__inform-subtitle {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 152%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.gifts__img-general {
+  height: 230px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+}
+
+.gifts__inform-second {
+  color: #06a44f;
+}
+
+.gifts__inform-four {
+  color: #ff43f7;
+}
+
+.gifts__img-first {
+  background-image: url(/images/gift-for-work.png);
+}
+
+.gifts__img-second {
+  background-image: url(/images/health.png);
+}
+
+.gifts__img-third {
+  background-image: url(/images/harmony.png);
+}
