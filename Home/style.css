@@ -406,3 +406,92 @@ body {
 .gifts__img-third {
   background-image: url(/images/harmony.png);
 }
+
+.timer {
+  padding: 60px 0px;
+  height: 668px;
+  background: #ff4646;
+  background-image: url("/images/bg-forest.png"), url("/images/bg-snow.png");
+  background-size: cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+}
+
+.timer__wrapper {
+  padding: 60px 0px;
+}
+
+.timer__inner {
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+  align-items: center;
+  margin: 0 auto;
+  max-width: 428px;
+  width: 100%;
+  padding: 60px 0px;
+}
+
+.timer__subtitle {
+  color: white;
+  text-align: center;
+}
+
+.timer__button {
+  margin-top: 20px;
+}
+
+.timer__title {
+  margin-top: 20px;
+  color: white;
+}
+
+.timer__container {
+  position: relative;
+  margin-top: 8px;
+  border-radius: 20px;
+  padding: 8px 12px 12px 12px;
+  width: 344px;
+  height: 72px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+}
+
+.general__timer-item{
+  width: 80px;
+  height: 52px;
+}
+
+.general__timer-number{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+.general__timer-text{
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+
+.timer__content{
+  position: relative;
+}
+
+.timer__content::after{
+  content: '';
+  height: 20px;
+  width: 2px;
+  background-color:rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 16px;
+  right: 0px;
+}
