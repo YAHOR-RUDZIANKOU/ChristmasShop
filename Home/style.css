@@ -57,6 +57,7 @@ body {
 .header__row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navigation__items {
@@ -96,6 +97,11 @@ body {
 
 .navigation__items li {
   padding: 12px 20px;
+}
+
+.burger__navigation li {
+  padding: 12px 20px;
+  text-align: center;
 }
 
 .hero {
@@ -462,12 +468,12 @@ body {
   display: flex;
 }
 
-.general__timer-item{
+.general__timer-item {
   width: 80px;
   height: 52px;
 }
 
-.general__timer-number{
+.general__timer-number {
   font-weight: 600;
   font-size: 24px;
   line-height: 152%;
@@ -477,7 +483,7 @@ body {
   text-align: center;
 }
 
-.general__timer-text{
+.general__timer-text {
   font-weight: 600;
   font-size: 12px;
   line-height: 130%;
@@ -487,16 +493,77 @@ body {
   text-align: center;
 }
 
-.timer__content{
+.timer__content {
   position: relative;
 }
 
-.timer__content::after{
-  content: '';
+.timer__content::after {
+  content: "";
   height: 20px;
   width: 2px;
-  background-color:rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   position: absolute;
   top: 16px;
   right: 0px;
+}
+
+.burger__menu-none {
+  display: none;
+}
+
+.burger__menu {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.burger__menu-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.burger__line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.burger__inner {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: -100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0px 8px;
+  }
+
+  .header__navigation-none {
+    display: none;
+  }
+
+  .burger__menu-none {
+    display: block;
+  }
+
+  .navigation__item{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 152%;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
 }
