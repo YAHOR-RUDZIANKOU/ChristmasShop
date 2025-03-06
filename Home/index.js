@@ -103,7 +103,6 @@ function makeInActiveBtn(arrow, button) {
   button.classList.add("button__opacity");
   button.disabled = true;
 }
-// ----------Slider End---------------------------
 
 // -------------------Timer Start-----------------------
 
@@ -144,3 +143,55 @@ function modifyTimer() {
 }
 
 setInterval(modifyTimer, 1000);
+
+// ------------Random four cards section(best gifts)------------------
+const cardsWrapper = document.querySelector(".gifts__cards");
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+const cards = [
+  { imgClass: "gifts__img-first", titleClass: "gifts__inform-first", title: "For work", subtitle: "Console.log Guru" },
+  { imgClass: "gifts__img-second", titleClass: "gifts__inform-second", title: "For health", subtitle: "Hydration Bot" },
+  { imgClass: "gifts__img-first", titleClass: "gifts__inform-first", title: "For work", subtitle: "Merge Master" },
+  { imgClass: "gifts__img-third", titleClass: "gifts__inform-four", title: "For harmony", subtitle: "Spontaneous Coding Philosopher" },
+];
+
+let copyCards=cards.slice();
+let shuffleCards = shuffle(copyCards);
+
+function createCards(obj) {
+  let card = document.createElement("div");
+  card.classList.add("gifts__card");
+
+  let imgDiv = document.createElement("div");
+  imgDiv.classList.add(obj.imgClass, "gifts__img-general");
+
+  let informDiv = document.createElement("div");
+  informDiv.classList.add("gifts__inform");
+
+  let titleDiv = document.createElement("div");
+  titleDiv.classList.add(obj.titleClass, "generation__inform-title");
+  titleDiv.textContent = obj.title;
+
+  let subtitleDiv = document.createElement("div");
+  subtitleDiv.classList.add("gifts__inform-subtitle");
+  subtitleDiv.textContent = obj.subtitle;
+
+  informDiv.appendChild(titleDiv);
+  informDiv.appendChild(subtitleDiv);
+  card.appendChild(imgDiv);
+  card.appendChild(informDiv);
+
+  return card;
+}
+
+shuffleCards.forEach((obj) => {
+  let card = createCards(obj);
+  cardsWrapper.appendChild(card);
+});
