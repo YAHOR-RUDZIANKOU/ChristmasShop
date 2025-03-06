@@ -9,6 +9,11 @@ let obj = {};
 document.addEventListener("DOMContentLoaded", () => {
   obj = showDistanse();
   leftButton.disabled = true;
+
+  dayWrapper.innerHTML = " ";
+  hoursWrapper.innerHTML = " ";
+  minutesWrapper.innerHTML = " ";
+  secondsWrapper.innerHTML = " ";
 });
 
 function showDistanse() {
@@ -100,4 +105,42 @@ function makeInActiveBtn(arrow, button) {
 }
 // ----------Slider End---------------------------
 
+// -------------------Timer Start-----------------------
 
+const dayWrapper = document.querySelector(".timer__days");
+const hoursWrapper = document.querySelector(".timer__hours");
+const minutesWrapper = document.querySelector(".timer__minutes");
+const secondsWrapper = document.querySelector(".timer__seconds");
+
+function showResultTime() {
+  let currentTime = new Date().getTime();
+  let newYearTime = new Date();
+  newYearTime.setFullYear(2026, 0, 1);
+  newYearTime.setHours(0, 0, 0, 0);
+  let resultTimeMilli = newYearTime.getTime() - currentTime;
+
+  let days = Math.floor(resultTimeMilli / 86400000);
+  let ostMilli = resultTimeMilli % 86400000;
+  let hours = Math.floor(ostMilli / 3600000);
+  ostMilli = ostMilli % 3600000;
+  let minutes = Math.floor(ostMilli / 60000);
+  ostMilli = ostMilli % 60000;
+  let seconds = Math.floor(ostMilli / 1000);
+
+  return {
+    days: days,
+    hours: hours,
+    minutes: minutes,
+    seconds: seconds,
+  };
+}
+
+function modifyTimer() {
+  let obj = showResultTime();
+  dayWrapper.innerHTML = obj.days;
+  hoursWrapper.innerHTML = obj.hours;
+  minutesWrapper.innerHTML = obj.minutes;
+  secondsWrapper.innerHTML = obj.seconds;
+}
+
+setInterval(modifyTimer, 1000);
