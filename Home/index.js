@@ -35,6 +35,13 @@ function showDistanse() {
       result: result,
       times: 3,
     };
+  } else if (width < 769 && width >= 380) {
+    visibleArea = width - 8;
+    result = Math.floor((fullWidth - visibleArea) / 6);
+    return {
+      result: result,
+      times: 6,
+    };
   }
 }
 
@@ -204,7 +211,7 @@ const lines = document.querySelectorAll(".burger__menu-wrapper .burger__line");
 
 burgerMenu.addEventListener("click", () => {
   changeBurgerMenu();
-  window.addEventListener('resize', checkWidth);
+  window.addEventListener("resize", checkWidth);
   document.addEventListener("click", deleteMenu);
 });
 
@@ -213,7 +220,6 @@ function deleteMenu(event) {
     changeBurgerMenu();
     document.removeEventListener("click", deleteMenu);
   }
-
 }
 
 function changeBurgerMenu() {
@@ -223,9 +229,9 @@ function changeBurgerMenu() {
   document.documentElement.classList.toggle("no-scroll");
 }
 
-function checkWidth(){
-  if(window.innerWidth>768){
+function checkWidth() {
+  if (window.innerWidth > 768) {
     changeBurgerMenu();
-    window.removeEventListener('resize', checkWidth);
+    window.removeEventListener("resize", checkWidth);
   }
 }
