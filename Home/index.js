@@ -1,4 +1,4 @@
-// -------------------Slider Start-----------------------
+// -------------------Slider-----------------------
 let leftButton = document.querySelector(".button__left");
 let rightButton = document.querySelector(".button__right");
 let slider = document.querySelector(".slider__inside");
@@ -104,7 +104,7 @@ function makeInActiveBtn(arrow, button) {
   button.disabled = true;
 }
 
-// -------------------Timer Start-----------------------
+// -------------------Timer-----------------------
 
 const dayWrapper = document.querySelector(".timer__days");
 const hoursWrapper = document.querySelector(".timer__hours");
@@ -162,7 +162,7 @@ const cards = [
   { imgClass: "gifts__img-third", titleClass: "gifts__inform-four", title: "For harmony", subtitle: "Spontaneous Coding Philosopher" },
 ];
 
-let copyCards=cards.slice();
+let copyCards = cards.slice();
 let shuffleCards = shuffle(copyCards);
 
 function createCards(obj) {
@@ -195,3 +195,37 @@ shuffleCards.forEach((obj) => {
   let card = createCards(obj);
   cardsWrapper.appendChild(card);
 });
+
+// -----------------burger menu --------------------------------
+
+const burgerMenu = document.querySelector(".burger__menu-wrapper");
+const burgerArea = document.querySelector(".burger__inner");
+const lines = document.querySelectorAll(".burger__menu-wrapper .burger__line");
+
+burgerMenu.addEventListener("click", () => {
+  changeBurgerMenu();
+  window.addEventListener('resize', checkWidth);
+  document.addEventListener("click", deleteMenu);
+});
+
+function deleteMenu(event) {
+  if (event.target.className === "navigation__item") {
+    changeBurgerMenu();
+    document.removeEventListener("click", deleteMenu);
+  }
+
+}
+
+function changeBurgerMenu() {
+  burgerArea.classList.toggle("burger__inner-change");
+  lines[0].classList.toggle("activeOne");
+  lines[1].classList.toggle("activeTwo");
+  document.documentElement.classList.toggle("no-scroll");
+}
+
+function checkWidth(){
+  if(window.innerWidth>768){
+    changeBurgerMenu();
+    window.removeEventListener('resize', checkWidth);
+  }
+}
