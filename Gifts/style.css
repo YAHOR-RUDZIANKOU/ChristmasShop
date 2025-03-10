@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Allura Regular";
+  src: url("/fonts/Allura\ Regular.woff2");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("/fonts/Montserrat-Bold.woff2");
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("/fonts/Montserrat-SemiBold.woff2");
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("/fonts/Montserrat-Regular.woff2");
+}
+
+@font-face {
+  font-family: "sf-pro-display-bold";
+  src: url("/fonts/sf-pro-display-bold.woff2");
+}
+
+@font-face {
+  font-family: "sf-pro-text-regular-webfont";
+  src: url("/fonts/sf-pro-text-regular-webfont.woff2");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Montserrat-SemiBold";
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 12px 0px;
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__items {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.gifts__navigation-items {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: black;
+}
+
+.header__gifts {
+  padding: 8px 20px;
+  max-width: 142px;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation__item {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.navigation__items li {
+  padding: 12px 20px;
+}
+
+.gifts__navigation-items li {
+  padding: 12px 20px;
+}
+.gifts {
+  height: 1394px;
+  padding: 60px 0px;
+  background: #ff4646;
+  background-image: url(/images/bg-garland.png);
+  background-size: 100% 200px;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.gifts__title {
+  max-width: 426px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.gifts__navigation-wrapper {
+  margin-top: 20px;
+}
