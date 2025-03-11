@@ -95,11 +95,7 @@ body {
   line-height: 130%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: white;
-  padding: 12px 20px;
-}
-
-.navigation__items li {
+  color: black;
   padding: 12px 20px;
 }
 
@@ -202,10 +198,49 @@ body {
   flex: 0 0 calc((100% - 36px) / 4);
   background-color: #ecf3f8;
   border-radius: 20px;
+  min-width: 310px;
 }
 
 .btn__bg {
- background: rgba(255, 255, 255, 0.2);
- border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
 }
 
+.gifts__navigation-items li button {
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .container {
+    margin: 0px 60px;
+  }
+}
+
+.scroll__top-text {
+  position: relative;
+  width: 50px;
+  text-align: center;
+  color: white;
+}
+
+.scroll__top-text::before {
+  content: "↑";
+  font-size: 35px;
+  position: absolute;
+  z-index: 999;
+  color: white;
+  top: -47px;
+}
+
+.scroll__top-wrapper {
+  position: fixed;
+  right: 4px;
+  top: 300px;
+  background-color: #333333;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.scroll__top-none{
+  display: none;
+}

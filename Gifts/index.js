@@ -1,8 +1,11 @@
+// --------------------Create cards----------------
+
 const ALL = document.querySelector(".navigation__item-all");
 const WORK = document.querySelector(".navigation__item-work");
 const HEALTH = document.querySelector(".navigation__item-health");
 const HARMONY = document.querySelector(".navigation__item-harmony");
 const cardsWrapper = document.querySelector(".gifts__cards");
+let heightCardWrapper = 0;
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -65,30 +68,39 @@ ALL.addEventListener("click", () => {
   let shuffleResult = shuffle([...repeatCards]);
   toggleCards(shuffleResult);
   addStyles(ALL);
+  heightCardWrapper = showHeightBlock();
+  // console.log(heightCardWrapper)
 });
 
 document.addEventListener("DOMContentLoaded", () => {
   let shuffleResult = shuffle([...repeatCards]);
   toggleCards(shuffleResult);
   addStyles(ALL);
+  checkWidth();
 });
 
 WORK.addEventListener("click", () => {
   let workArray = repeatCards.slice(0, 12);
   toggleCards(shuffle(workArray));
   addStyles(WORK);
+  heightCardWrapper = showHeightBlock();
+  // console.log(heightCardWrapper)
 });
 
 HEALTH.addEventListener("click", () => {
   let workArray = repeatCards.slice(12, 24);
   toggleCards(shuffle(workArray));
   addStyles(HEALTH);
+  heightCardWrapper = showHeightBlock();
+  // console.log(heightCardWrapper)
 });
 
 HARMONY.addEventListener("click", () => {
   let workArray = repeatCards.slice(24, 36);
   toggleCards(shuffle(workArray));
   addStyles(HARMONY);
+  heightCardWrapper = showHeightBlock();
+  // console.log(heightCardWrapper)
 });
 
 function toggleCards(currentArray) {
@@ -101,9 +113,9 @@ function toggleCards(currentArray) {
 
 function addStyles(button) {
   let allButtons = Array.from(document.querySelectorAll(".navigation__item"));
-  allButtons.forEach((value)=>{
+  allButtons.forEach((value) => {
     removeStyles(value);
-  })
+  });
   button.disabled = true;
   button.classList.add("btn__bg");
 }
@@ -111,4 +123,43 @@ function addStyles(button) {
 function removeStyles(button) {
   button.disabled = false;
   button.classList.remove("btn__bg");
+}
+
+// ---------Button Scroll-to-Top---------------
+
+window.addEventListener("resize", checkWidth);
+const buttonTop = document.querySelector(".scroll__top-wrapper");
+
+buttonTop.addEventListener("click", () => {
+  checkWidth();
+  buttonTop.classList.add("scroll__top-none");
+});
+
+function checkWidth() {
+  if (window.innerWidth <= 768) {
+    window.addEventListener("scroll", checkTop);
+    heightCardWrapper = showHeightBlock();
+    // console.log(heightCardWrapper)
+  } else {
+    window.removeEventListener("scroll", checkTop);
+    buttonTop.classList.add("scroll__top-none");
+  }
+}
+
+function checkTop() {
+  const isHidden = buttonTop.classList.contains("scroll__top-none");
+  if (window.scrollY >= 900 && window.scrollY <= heightCardWrapper) {
+    if (isHidden) {
+      buttonTop.classList.remove("scroll__top-none");
+    }
+  } else {
+    if (!isHidden) {
+      buttonTop.classList.add("scroll__top-none");
+    }
+  }
+}
+
+function showHeightBlock() {
+  let height = cardsWrapper.offsetHeight;
+  return height;
 }
