@@ -48,6 +48,7 @@ body {
 
 .header {
   padding: 12px 0px;
+  margin: 0 82px;
 }
 
 .header__row {
@@ -243,4 +244,70 @@ body {
 
 .scroll__top-none{
   display: none;
+}
+
+.burger__menu {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.burger__menu-none {
+  display: none;
+}
+
+.burger__menu-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.burger__line {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  border-radius: 2px;
+  transition: transform 1s linear;
+}
+
+@media (max-width: 768px) {
+  .burger__menu-none {
+    display: block;
+  }
+
+  .header__navigation-none {
+    display: none;
+  }
+  .header{
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .gifts__title{
+    min-width: 364px;
+    width: 100%;
+  }
+
+  .container{
+    margin: 0 8px;
+  }
+
+  .navigation__item{
+    padding: 12px 8px;
+    letter-spacing: 0;
+  }
+
+  .gifts__cards{
+    justify-content: center;
+  }
+
+  .scroll__top-text::before{
+    right: 8px;
+  }
 }
