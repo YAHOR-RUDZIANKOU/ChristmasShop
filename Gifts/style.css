@@ -236,3 +236,21 @@ body {
   flex-direction: column;
   gap: 60px;
 }
+
+.footer__items{
+  margin: 0 82px;
+}
+
+@media (max-width: 768px) {
+  .footer__items {
+    flex-wrap: wrap;
+  }
+
+  .footer__items a {
+    flex: 0 0 100%;
+  }
+
+  .footer__items{
+    margin: 0 8px;
+  }
+}
