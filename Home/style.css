@@ -593,14 +593,14 @@ body {
   letter-spacing: 0.05em;
 }
 
-.footer__column{
+.footer__column {
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
 }
 
-.footer__wrapper{
+.footer__wrapper {
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -672,5 +672,39 @@ body {
 
   .about__text {
     font-family: "Montserrat-Regular";
+  }
+
+  .footer__items {
+    flex-wrap: wrap;
+  }
+
+  .footer__items a {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .about__column-left {
+    padding: 0px 20px;
+  }
+  
+  .about {
+    height: 970px;
+  }
+
+  .about__row {
+    flex-wrap: wrap;
+  }
+
+  .about__column-right {
+    margin-top: -30px;
+    height: 528px;
+    flex: 0 0 100%;
+    border-radius: 20px;
+  }
+
+  .about__column-left {
+    flex: 0 0 100%;
+    border-radius: 20px;
   }
 }
