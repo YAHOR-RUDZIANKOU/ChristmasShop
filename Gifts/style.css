@@ -314,6 +314,20 @@ body {
   .scroll__top-text::before {
     right: 8px;
   }
+
+  .show__cards-wrapper{
+    max-width: 364px !important;
+    width: 100%;
+  }
+
+  .gifts__row-text{
+    max-width: 158px !important;
+    width: 100%;
+  }
+
+  .scroll__top-wrapper{
+    right: 6px;
+  }
 }
 .footer {
   padding: 60px 0px;
