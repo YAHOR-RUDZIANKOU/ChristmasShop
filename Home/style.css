@@ -97,9 +97,6 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: black;
-}
-
-.navigation__items li {
   padding: 12px 20px;
 }
 
@@ -123,6 +120,7 @@ body {
 .hero__container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 12px;
   padding: 60px 0px;
   height: 404px;
@@ -163,6 +161,8 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: white;
+  transition: color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 
 .hero__button {
@@ -308,6 +308,7 @@ body {
   width: 56px;
   height: 56px;
   position: relative;
+  transition: background-color 0.3s linear;
 }
 
 .slider__btn svg {
@@ -369,6 +370,7 @@ body {
   padding: 20px;
   background-color: white;
   border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .generation__inform-title {
@@ -391,6 +393,7 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #000;
+  transition: color 0.3s ease;
 }
 
 .gifts__img-general {
@@ -625,6 +628,8 @@ body {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: black;
+  transition: transform 0.3s linear;
+  transition: color 0.3s linear;
 }
 
 .footer__item-text {
@@ -634,6 +639,7 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: black;
+  transition: color 0.3s linear;
 }
 
 .footer__item {
@@ -767,4 +773,53 @@ body {
   display: flex;
   flex-direction: column;
   gap: 60px;
+}
+
+.navigation__items li {
+  transition: background-color 0.3s ease, border-radius 0.3s ease, color 1.5s ease;
+}
+
+.navigation__items li a {
+  transition: background-color 0.3s ease, border-radius 0.3s ease, color 1.5s ease;
+}
+
+.navigation__items li a:hover {
+  background: rgba(255, 70, 70, 0.1);
+  border-radius: 12px;
+  color: red;
+}
+
+.gifts__card:hover .gifts__inform-subtitle {
+  color: white;
+}
+
+.gifts__card:hover .gifts__inform {
+  background-color: #212121;
+}
+
+.footer__item-link:hover .footer__item-text {
+  color: red;
+}
+
+.footer__item-link:hover .footer__item-generation {
+  transform: scale(1.2);
+  color: red;
+}
+
+.button-general:hover {
+  color: #181c29;
+  background-color: white;
+}
+
+.slider__btn:not(:disabled):hover {
+  background-color: white;
+}
+
+.slider__btn svg path {
+  stroke: white;
+  transition: stroke 0.3s linear;
+}
+
+.slider__btn:not(:disabled):hover svg path {
+  stroke: red;
 }

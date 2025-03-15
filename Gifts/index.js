@@ -424,7 +424,6 @@ function showWindowCard(allCardsPar) {
 }
 
 function deleteCard(event,modalWindows,clickHandler){
-  console.log('1');
   if (!(event.target.closest('.show__inner')) || event.target.closest('.show__cards-close')) {
     document.body.removeChild(modalWindows);
     document.removeEventListener('click',clickHandler,true);

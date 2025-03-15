@@ -235,3 +235,11 @@ function checkWidth() {
     window.removeEventListener("resize", checkWidth);
   }
 }
+
+// -----------transition to  gifts pages----------------
+
+// let transitionBTN=Array.from(document.querySelectorAll('.button-general'));
+
+// transitionBTN.forEach((value)=>{
+//   value.addEventListener('clc')
+// })

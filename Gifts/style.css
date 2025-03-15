@@ -105,6 +105,7 @@ body {
 }
 
 .gifts {
+  border-radius: 20px;
   padding: 60px 0px;
   background: #ff4646;
   background-image: url(/images/bg-garland.png);
@@ -167,6 +168,7 @@ body {
   padding: 20px;
   background-color: white;
   border-radius: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .generation__inform-title {
@@ -185,6 +187,7 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #000;
+  transition: color 0.3s ease;
 }
 
 .gifts__cards {
@@ -315,17 +318,17 @@ body {
     right: 8px;
   }
 
-  .show__cards-wrapper{
+  .show__cards-wrapper {
     max-width: 364px !important;
     width: 100%;
   }
 
-  .gifts__row-text{
+  .gifts__row-text {
     max-width: 158px !important;
     width: 100%;
   }
 
-  .scroll__top-wrapper{
+  .scroll__top-wrapper {
     right: 6px;
   }
 }
@@ -372,6 +375,8 @@ body {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: black;
+  transition: transform 0.5s linear;
+  transition: color 0.5s linear;
 }
 
 .footer__item-text {
@@ -381,6 +386,7 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: black;
+  transition: color 0.3s linear;
 }
 
 .footer__item {
@@ -416,6 +422,7 @@ body {
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0.05em;
+  transition: color 0.4s linear;
 }
 
 .footer__column {
@@ -455,7 +462,7 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   max-width: 400px;
   width: 100%;
   background-color: #ecf3f8;
@@ -477,7 +484,7 @@ body {
   margin-top: 20px;
 }
 
-.gifts__super-title{
+.gifts__super-title {
   font-weight: 600;
   font-size: 12px;
   line-height: 130%;
@@ -485,29 +492,27 @@ body {
   text-transform: uppercase;
 }
 
-.gifts__wrapper{
+.gifts__wrapper {
   margin-top: 8px;
   display: flex;
   flex-direction: column;
 }
 
-.gifts__row-general{
+.gifts__row-general {
   font-family: "Montserrat-Regular";
   font-weight: 400;
   font-size: 16px;
   line-height: 148%;
 }
 
-.gifts__row-imges{
+.gifts__row-imges {
   display: flex;
   width: 16px;
   height: 16px;
   gap: 8px;
-
-
 }
 
-.gifts__row{
+.gifts__row {
   max-width: 360px;
   width: 100%;
   display: flex;
@@ -515,22 +520,22 @@ body {
   gap: 12px;
 }
 
-.gifts__row-text{
+.gifts__row-text {
   max-width: 184px;
   width: 100%;
 }
 
-.show__inner{
+.show__inner {
   position: relative;
 }
 
-.show__cards-close{
+.show__cards-close {
   position: absolute;
   top: 12px;
   right: 12px;
 }
 
-.show__darken-windows{
+.show__darken-windows {
   position: fixed;
   top: 0;
   left: 0;
@@ -543,4 +548,49 @@ body {
   overflow-y: hidden;
   height: 100%;
   width: 100%;
+}
+
+.navigation__items li:not(:first-child) a {
+  transition: background-color 0.3s ease, border-radius 0.3s ease, color 1.5s ease;
+}
+
+.navigation__items li:not(:first-child) a:hover {
+  background: rgba(255, 70, 70, 0.1);
+  border-radius: 12px;
+  color: red;
+}
+
+.gifts__card:hover .gifts__inform-subtitle {
+  color: white;
+}
+
+.gifts__card:hover .gifts__inform {
+  background-color: #212121;
+}
+
+.footer__item-link:hover .footer__item-text {
+  color: red;
+}
+
+.footer__item-link:hover .footer__item-generation {
+  transform: scale(1.2);
+  color: red;
+}
+
+.gifts__navigation-items li {
+  transition:  background-color 0.3s linear ;
+  transition:  border-radius 0.3s linear ;
+}
+
+.gifts__navigation-items li:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.footer__column-item svg path {
+  stroke: #181C29; /* Начальный цвет */
+}
+
+.footer__column-subtext a:hover{
+  color: red;
 }
