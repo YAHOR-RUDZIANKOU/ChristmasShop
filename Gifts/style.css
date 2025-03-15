@@ -40,7 +40,7 @@ body {
   font-family: "Montserrat-SemiBold";
 }
 
-.container{
+.container {
   margin: 0 82px;
 }
 
@@ -246,7 +246,7 @@ body {
   border-radius: 5px;
 }
 
-.scroll__top-none{
+.scroll__top-none {
   display: none;
 }
 
@@ -287,31 +287,31 @@ body {
   .header__navigation-none {
     display: none;
   }
-  .header{
+  .header {
     margin: 0 8px;
   }
 }
 
 @media (max-width: 380px) {
-  .gifts__title{
+  .gifts__title {
     min-width: 364px;
     width: 100%;
   }
 
-  .container{
+  .container {
     margin: 0 8px;
   }
 
-  .navigation__item{
+  .navigation__item {
     padding: 12px 8px;
     letter-spacing: 0;
   }
 
-  .gifts__cards{
+  .gifts__cards {
     justify-content: center;
   }
 
-  .scroll__top-text::before{
+  .scroll__top-text::before {
     right: 8px;
   }
 }
@@ -404,20 +404,20 @@ body {
   letter-spacing: 0.05em;
 }
 
-.footer__column{
+.footer__column {
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
 }
 
-.footer__wrapper{
+.footer__wrapper {
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
-.footer__items{
+.footer__items {
   margin: 0 82px;
 }
 
@@ -430,7 +430,103 @@ body {
     flex: 0 0 100%;
   }
 
-  .footer__items{
+  .footer__items {
     margin: 0 8px;
   }
+}
+
+/* ------------------------- */
+
+.show__cards-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 400px;
+  width: 100%;
+  background-color: #ecf3f8;
+  border-radius: 20px;
+  z-index: 999;
+}
+
+.show__text {
+  font-family: "Montserrat-Regular";
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 148%;
+  max-width: 360px;
+  width: 100%;
+}
+
+.gifts__super-wrapper {
+  margin-top: 20px;
+}
+
+.gifts__super-title{
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.gifts__wrapper{
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gifts__row-general{
+  font-family: "Montserrat-Regular";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 148%;
+}
+
+.gifts__row-imges{
+  display: flex;
+  width: 16px;
+  height: 16px;
+  gap: 8px;
+
+
+}
+
+.gifts__row{
+  max-width: 360px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gifts__row-text{
+  max-width: 184px;
+  width: 100%;
+}
+
+.show__inner{
+  position: relative;
+}
+
+.show__cards-close{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.show__darken-windows{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.no-scroll {
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
 }
